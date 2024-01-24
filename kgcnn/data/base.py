@@ -611,7 +611,7 @@ class MemoryGraphDataset(MemoryGraphList):
         out_list = []
         for i, x in enumerate(name_file_list):
             # Only one file per path
-            file_loaded = read_method_file(os.path.join(self.file_directory_path, x))
+            file_loaded = read_method_file(os.path.join(self.file_directory_path, x+".cif"))
             if append_file_content:
                 if read_method_return_list:
                     out_list.append(file_loaded[0])
